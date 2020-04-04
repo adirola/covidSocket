@@ -1,0 +1,35 @@
+[
+  {
+    "id": "100",
+    "firstName": "Theo",
+    "lastName": "Leslie",
+    "doctor": {
+        "name": "Dr. Nick",
+        "userId": "0128e18a-3177-44d0-a5ca-4fdc9213b29b"
+    }
+  }, {
+    "id": "101",
+    "firstName": "Karin",
+    "lastName": "Heidelberg",
+    "doctor": {
+        "name": "Dr. Nick",
+        "userId": "688ef111-c182-41da-89dc-d032f8ce1119"
+    }
+  }, {
+    "id": "102",
+    "firstName": "Sebastian",
+    "lastName": "Vettel",
+    "doctor": {
+        "name": "Dr. Nick",
+        "userId": "688ef111-c182-41da-89dc-d032f8ce1119"
+    }
+  }, {
+    "id": "103",
+    "firstName": "Bernhard",
+    "lastName": "Russi",
+    "doctor": {
+        "name": "Dr. Alice Miller",
+        "userId": "c2e5d330-5ea2-4f85-aba1-2c00dac2991a"
+    }
+  }
+]
