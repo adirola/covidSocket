@@ -1,4 +1,5 @@
 const getParams = query => {
+    console.log(query)
     if (!query) {
         return { };
     }
@@ -23,6 +24,7 @@ var app = new Vue({
     },
     created: function() {
         let params = getParams(window.location.search);
+        console.log(params);
         if (!params || !params.id) {
             return;
         }

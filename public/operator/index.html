@@ -29,8 +29,8 @@
         </thead>
         <tbody>
             <tr v-for="patient in patients">
-                <td>{{patient.id}}</td>
-                <td>{{patient.firstName}} {{patient.lastName}}</td>
+                <td>{{patient._id}}</td>
+                <td>{{patient.name}}</td>
                 <td>{{patient.doctor.name}}</td>
                 <td>{{patient.status}}</td>
                 <td class="text-center">{{patient.wait}} min</td>

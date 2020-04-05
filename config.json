@@ -2,7 +2,7 @@
 	"user": {
 	    "domain": "circuitsandbox.net",
 		"client_id": "5394cce7838f4762a17058fe3efa7127",
-		"client_secret": "0a3a84877f74423fac07558f2ad036e5",
+		"client_secret": "2ddd4a90a96a47b09eb0ea35321fc850",
 		"autoRenewToken": true,
 		"scope": "READ_CONVERSATIONS,WRITE_CONVERSATIONS,READ_USER,READ_USER_PROFILE"
 	}

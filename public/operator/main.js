@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', event => {
         el: '#app',
         methods: {
             connect: function (patient) {
-                socket.emit('connect-to-doctor', patient.id)
-                console.log(`Connect patient ${patient.firstName} ${patient.lastName}`);
+                socket.emit('connect-to-doctor', patient._id)
+                console.log(`Connect patient ${patient.name}`);
             },
             disconnect: function (patient) {
-                socket.emit('disconnect-patient', patient.id)
-                console.log(`Disonnect patient ${patient.firstName} ${patient.lastName}`);
+                socket.emit('disconnect-patient', patient._id)
+                console.log(`Disonnect patient ${patient.name}`);
             },
             message: function () {
                 alert(`Not implemented yet`);

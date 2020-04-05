@@ -30,7 +30,7 @@ class Patient {
 
         Object.defineProperty(this, 'id', {
             get: function () {
-                return this.appointment.id;
+                return this.appointment._id;
             }
         });
 
@@ -55,7 +55,7 @@ class Patient {
 
     redirect (url) {
         // Redirect patient
-        url = `${url}&firstName=${this.appointment.firstName}&lastName=${this.appointment.lastName}`;
+        url = `${url}&firstName=${this.appointment.name}&lastName=${this.appointment.name}`;
         this.socket.emit('redirect', {url: url});
     }
 }

@@ -49,7 +49,7 @@ io.on('connection', socket => {
         .then(appointment => {
             // Check if the patient is already in the list. Can be the case if user goes
             // back from 'In Room' to home.
-            let patient = patients.find(p => { return p.id === appointment.id; });
+            let patient = patients.find(p => { return p.id === appointment._id; });
             patient && patients.splice(patients.indexOf(patient), 1);
 
             patient = new Patient(socket, appointment);
@@ -64,6 +64,7 @@ io.on('connection', socket => {
         })
         .catch(err => {
             console.error(err);
+            socket.emit('update', err);
             socket.disconnect();
         });
 

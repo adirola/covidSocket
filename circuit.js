@@ -41,6 +41,14 @@ function createConversation(patient) {
     });
 }
 
+function resolveUserID(userID){
+  return  client.logon()
+    .then(user => console.log('Logged on as bot: ' + user.emailAddress))
+    .then(() => client.getUsersByEmail([userID]))
+    .then(users => users)
+    .catch(console.error);
+}
+
 /**
  * Setup the listeners for call state events
  */
@@ -58,5 +66,6 @@ function setupListeners() {
 
 module.exports = {
     init,
-    createConversation
+    createConversation,
+    resolveUserID
 }
