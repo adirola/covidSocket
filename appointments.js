@@ -10,14 +10,14 @@ function get(id) {
     return new Promise(async (resolve, reject) => {
         let patient = {};
         let docList = []
-        await api_helper.make_API_call('http://ccovidclinicbackend.centralindia.cloudapp.azure.com:3001/api/v1/users/'+id)
+        await api_helper.make_API_call('http://covidclinicbackend.centralindia.cloudapp.azure.com:3001/api/v1/users/'+id)
             .then(response => {
                 patient= response.data;
             })
             .catch(error => {
                 console.log(error)
             })
-        await api_helper.make_API_call('http://ccovidclinicbackend.centralindia.cloudapp.azure.com:3001/api/v1/doctors')
+        await api_helper.make_API_call('http://covidclinicbackend.centralindia.cloudapp.azure.com:3001/api/v1/doctors')
             .then(response => {
                 docList = response.data.filter((item)=>{return item.status===true});
             })
